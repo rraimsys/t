@@ -1,5 +1,5 @@
 # Welcome to Basics of Storage ( 1 ) 
-ooo
+
 # Agenda - 
 
  - [ ]  Cover storage from a PC point of view 
@@ -124,15 +124,20 @@ Think of _indirection_
 super blocks = *[size of installation, total counter size of filem, free data blocks, free inodes ]*
 
 *Quiz* : What if free inodes count is exhausted, but disk space is not exhausted? 
+
 *Quiz* : Why should the inode copy be there in the primary storage? Think buffer cache
+
 In Secondary Storage inode versus IN Primary storage Inode 
- **Secondary Storage Inode** <=> *[ security, reg ||dir || other, modification time of file, modification of inode, size of file, addresses of the blocks on disk, ownership  ]* 
- **In Primary storage Inode** = [ isLocked, areProcessWaiting, isFileChanged, dev, inode integer + pointers + reference counter ] 
+ **Secondary Storage Inode** <=> 
+ *[ security, reg ||dir || other, modification time of file, modification of inode, size of file, addresses of the blocks on disk, ownership  ]* 
+ **In Primary storage Inode** <=>
+ [ isLocked, areProcessWaiting, isFileChanged, dev, inode integer + pointers + reference counter ] 
  *What it means for an indoe to be free?*
+ 
   if ( ref count >= 0 ), not in free list, but just unlocked - 
   Unlock does not imply free in case of inode, but in case of buffers in buffer cache.
   lck(inode) then getblck then unlck(inode). Ref count is decreased only on close.
-  Inode m
+ 
  
 https://man7.org/linux/man-pages/man2/stat64.2.html
 
