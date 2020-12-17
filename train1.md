@@ -1,5 +1,5 @@
 # Welcome to Basics of Storage ( 1 ) 
-ooo
+
 # Agenda - 
 
  - [ ]  Cover storage from a PC point of view 
